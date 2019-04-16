@@ -1,28 +1,20 @@
 const path = require("path");
 const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 require("./webpack/loaders/buddha-page-loader");
 require("./webpack/loaders/buddha-post-loader");
 
 module.exports = {
-  entry: {
-    app: "./src/index.js",
-    store: "./src/store.js"
-  },
+  entry: "./src/index.js",
   output: {
-    filename: "[name].js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "assets"),
     publicPath: "/assets"
   },
   devtool: "source-map",
   devServer: {
-    contentBase: "./assets"
+    contentBase: "./"
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      title: "BuddhaBlog Dev",
-      filename: "./index.html"
-    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       "process.env": {

@@ -1,0 +1,40 @@
+nav {
+  text-align: center;
+
+  ul {
+    -webkit-padding-start: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+
+    li {
+      margin: 0;
+      flex: 1;
+      position: relative;
+    }
+  }
+}
+
+
+.navlink-active {
+  color: $darkLiver;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: -1rem;
+    content: ">"
+  }
+}
+
+
+// Desktop
+@media (min-width: 64em) {
+  nav {
+    * { text-align: right; }
+
+    ul {
+      display: block;
+    }
+  }
+}

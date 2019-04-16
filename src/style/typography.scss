@@ -1,0 +1,69 @@
+@custom-media --sm-viewport only screen and (min-width: 48em);
+@custom-media --md-viewport only screen and (min-width: 64em);
+@custom-media --lg-viewport only screen and (min-width: 75em);
+
+$colorText: $darkLiver;
+$colorTextLight: lighten($darkLiver, 32%);
+$contentTextSize: 1.4rem;
+
+html {
+  font-size: 14px;
+}
+
+$sansFamily: "Roboto", sans-serif;
+
+$serifFamily: "Roboto Slab", serif;
+
+body {
+  color: $colorText;
+  font-family: $sansFamily;
+}
+
+header {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+a {
+  cursor: pointer;
+}
+
+p {
+  font-size: $contentTextSize;
+  line-height: 1.58;
+  margin-top: 29px;
+}
+
+ul {
+  font-size: $contentTextSize;
+  margin-top: 2rem;
+
+  li {
+    line-height: 1.58;
+    margin: 0 0 20px 20px;
+
+    p { margin-top: 0; }
+  }
+}
+
+.brand {
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+@media (min-width: --lg-viewport) {
+  html {
+    font-size: 18px;
+  }
+}

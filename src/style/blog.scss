@@ -1,0 +1,84 @@
+.blog-tag {
+  font-size: 0.8rem;
+  margin: 0 3px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid $babyBlue;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 1.4rem;
+  margin-left: 0.1rem;
+  border-left: 2px solid gainsboro;
+  font-family: $serifFamily;
+  font-weight: bold;
+  color: $babyBlue;
+  position: relative;
+}
+
+code {
+  padding: 0.2rem;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(27,31,35,0.05);
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+pre.hljs {
+  padding: 3px 0;
+  border-radius: 3px;
+  margin: 1rem 1rem;
+  min-width: 200px;
+  font-size: 1rem;
+
+  code {
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  table.hljs-ln {
+    margin-top: 0;
+
+    td {
+      line-height: 1.4;
+    }
+  }
+}
+
+/* for block of numbers */
+td.hljs-ln-numbers {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+  min-width: 20px;
+	user-select: none;
+	text-align: right;
+  font-weight: normal;
+	color: #5c6370;
+	vertical-align: top;
+  padding: 0 0.5rem;
+
+	/* your custom style here */
+}
+
+/* for block of code */
+td.hljs-ln-code {
+	padding-left: 10px;
+}
+
+
+// Desktop
+@media (min-width: 64em) {
+  pre.hljs {
+    margin: 1rem 4rem;
+  }
+}

@@ -17,8 +17,6 @@ function pageSlug(title) {
     .toLowerCase()
     .replace(/ /g, "-");
 }
-console.log("PAGE LOADER LOADED");
-
 module.exports = function(source) {
   return "module.exports = " + JSON.stringify(parsePage(source));
 };
