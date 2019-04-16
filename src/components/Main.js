@@ -13,6 +13,8 @@ const Main = ({ posts, pages }) => (
       </div>
       <div className="col-md-8 col-xs-12 main-content">
         <Route exact path="/" component={() => <Blog posts={posts} />} />
+
+        {/* Build Routes for all non-blog pages */}
         {pages.map(page => (
           <Route
             path={"/" + page.slug}

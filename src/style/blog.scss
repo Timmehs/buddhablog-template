@@ -26,7 +26,7 @@ code {
   padding: 0.2rem;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(27,31,35,0.05);
+  background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
   vertical-align: middle;
 }
@@ -34,7 +34,7 @@ code {
 pre.hljs {
   padding: 3px 0;
   border-radius: 3px;
-  margin: 1rem 1rem;
+  margin: 1rem 0.5rem;
   min-width: 200px;
   font-size: 1rem;
 
@@ -54,31 +54,31 @@ pre.hljs {
 
 /* for block of numbers */
 td.hljs-ln-numbers {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   min-width: 20px;
-	user-select: none;
-	text-align: right;
+  user-select: none;
+  text-align: right;
   font-weight: normal;
-	color: #5c6370;
-	vertical-align: top;
+  color: #5c6370;
+  vertical-align: top;
   padding: 0 0.5rem;
 
-	/* your custom style here */
+  /* your custom style here */
 }
 
 /* for block of code */
 td.hljs-ln-code {
-	padding-left: 10px;
+  padding-left: 10px;
 }
 
 
 // Desktop
 @media (min-width: 64em) {
   pre.hljs {
-    margin: 1rem 4rem;
+    margin: 1rem 2rem;
   }
 }

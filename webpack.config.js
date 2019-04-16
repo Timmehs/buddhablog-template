@@ -1,7 +1,5 @@
 const path = require("path");
 const webpack = require("webpack");
-require("./webpack/loaders/buddha-page-loader");
-require("./webpack/loaders/buddha-post-loader");
 
 module.exports = {
   entry: "./src/index.js",

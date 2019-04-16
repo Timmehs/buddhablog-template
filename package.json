@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "flexboxgrid": "^6.3.1",
+    "highlight.js": "^9.15.6",
+    "highlightjs-line-numbers.js": "^2.7.0",
     "markdown-to-jsx": "^6.9.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",

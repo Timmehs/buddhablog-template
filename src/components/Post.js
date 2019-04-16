@@ -1,8 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import BlogTag from "./BlogTag";
-import { compiler } from "markdown-to-jsx";
+import Markdown from "markdown-to-jsx";
 import formatDate from "../util/dateFormatter";
+import CodeBlock from "./CodeBlock";
 
 const headerBackground = post => ({ backgroundImage: `url(${post.header})` });
 
@@ -28,7 +29,14 @@ const Post = ({ post }) => (
     {post.header && (
       <div className="post-header-image" style={headerBackground(post)} />
     )}
-    {compiler(post.markdown)}
+    <Markdown
+      options={{
+        overrides: {
+          pre: { component: CodeBlock }
+        }
+      }}>
+      {post.markdown}
+    </Markdown>
   </article>
 );
 
