@@ -19,10 +19,14 @@ module.exports = {
         NODE_ENV: process.env.NODE_ENV
       }
     }),
+    new webpack.ContextReplacementPlugin(
+      /highlight\.js\/lib\/languages$/,
+      new RegExp(`^./(ruby|javascript|css|scss|bash)`)
+    ),
     new webpack.optimize.AggressiveMergingPlugin() // Merge chunks
   ],
   resolveLoader: {
-    modules: ["node_modules", path.resolve(__dirname, "webpack", "loaders")]
+    modules: ["node_modules", "node_modules/buddhablog-cli/lib/webpack/loaders"]
   },
   module: {
     rules: [

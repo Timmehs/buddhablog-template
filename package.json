@@ -4,7 +4,10 @@
   "description": "A complete working buddhablog",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open"
+    "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
+    "build": "webpack -p",
+    "post": "buddha post",
+    "page": "buddha page"
   },
   "author": "Tim Sandberg <tasandberg@gmail.com>",
   "license": "ISC",
@@ -16,6 +19,7 @@
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-import-glob": "^2.0.0",
+    "buddhablog-cli": "^1.0.3",
     "css-loader": "^2.1.1",
     "eslint": "^5.16.0",
     "js-yaml": "^3.13.1",

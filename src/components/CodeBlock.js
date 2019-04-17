@@ -1,13 +1,11 @@
 import React, { useEffect, Component } from "react";
-import { each } from "lodash";
 
 /** Highlight.js and Languages */
 import hljs from "highlight.js/lib/highlight";
 window.hljs = hljs;
 require("highlightjs-line-numbers.js");
 
-const languages = ["ruby", "javascript", "css", "scss"];
-_.each(languages, lang => {
+["ruby", "javascript", "css", "scss", "bash"].forEach(lang => {
   hljs.registerLanguage(lang, require(`highlight.js/lib/languages/${lang}`));
 });
 

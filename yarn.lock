@@ -1313,6 +1313,16 @@ browserslist@^4.5.2, browserslist@^4.5.4:
     electron-to-chromium "^1.3.122"
     node-releases "^1.1.13"
 
+buddhablog-cli@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/buddhablog-cli/-/buddhablog-cli-1.0.3.tgz#f01fe1c652697ca915a44a8246040aed8801f46b"
+  integrity sha512-4UKV0fysufPFhQom3hxZQn0IVpHHZv5ZhvUVqJbSypS0tCqpmxV4GMHVTOBgmy0547MKHB/6Fih4tMf3CqqWCA==
+  dependencies:
+    colors "^1.3.3"
+    commander "^2.20.0"
+    mkdirp "^0.5.1"
+    user-settings "^0.2.0"
+
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
@@ -1559,6 +1569,11 @@ color-name@1.1.3:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
+colors@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/colors/-/colors-1.3.3.tgz#39e005d546afe01e01f9c4ca8fa50f686a01205d"
+  integrity sha512-mmGt/1pZqYRjMxB1axhTo16/snVZ5krrKkcmMeVKxzECMMXoCgnvTPp10QgHfcbQZw8Dq2jMNG6je4JlWU0gWg==
+
 combined-stream@^1.0.6, combined-stream@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.7.tgz#2d1d24317afb8abe95d6d2c0b07b57813539d828"
@@ -1566,7 +1581,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.19.0:
+commander@^2.19.0, commander@^2.20.0:
   version "2.20.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
   integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
@@ -6010,6 +6025,11 @@ use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/use/-/use-3.1.1.tgz#d50c8cac79a19fbc20f2911f56eb973f4e10070f"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
+
+user-settings@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/user-settings/-/user-settings-0.2.0.tgz#8284405a59b3060135cf352ec3511c8fd046707d"
+  integrity sha512-y0nkqj93bYuOaYJWAM8FhYUDg67dC9iPLY6lPwTwguP/amuSTHKAc1QSvSw16jmrKVcPyV6ti2e682vqE0Rdvw==
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
