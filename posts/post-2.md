@@ -8,7 +8,7 @@ What about code blocks?
 
 ```ruby
 def whatever(x)
-  puts x
+  puts x * 100
 end
 ```
 

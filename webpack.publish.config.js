@@ -4,21 +4,11 @@ const package = require("./package.json");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: {
-    main: "./src/index.js",
-    blog: "./src/store.js"
-  },
+  entry: "./src/index.js",
   output: {
-    filename: process.env.production
-      ? "[name]-[chunkash].js"
-      : "[name]-[hash].js",
-    path: path.resolve("assets"),
-    publicPath: "/"
-  },
-  devtool: "source-map",
-  devServer: {
-    contentBase: path.resolve("assets"),
-    publicPath: "/"
+    filename: "bundle.js",
+    path: path.resolve(__dirname, "assets"),
+    publicPath: "/assets"
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -33,11 +23,9 @@ module.exports = {
     ),
     new HtmlWebpackPlugin({
       title: package.name,
-      filename: path.resolve("assets", "index.html"),
-      template: path.resolve("src", "index.ejs"),
-      inject: false,
-      hash: true
-    })
+      filename: "../index.html"
+    }),
+    new webpack.optimize.AggressiveMergingPlugin()
   ],
   resolveLoader: {
     modules: ["node_modules", "node_modules/buddhablog-cli/lib/webpack/loaders"]
