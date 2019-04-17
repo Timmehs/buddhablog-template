@@ -9,35 +9,27 @@ module.exports = {
     blog: "./src/store.js"
   },
   output: {
-    filename: process.env.production
-      ? "[name]-[chunkash].js"
-      : "[name]-[hash].js",
+    filename: "[name].js",
     path: path.resolve("assets"),
-    publicPath: "/"
+    publicPath: process.env.NODE_ENV === "development" ? "/" : "assets"
   },
-  devtool: "source-map",
   devServer: {
-    contentBase: path.resolve("assets"),
-    publicPath: "/"
+    contentBase: path.resolve(__dirname),
+    hot: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: process.env.NODE_ENV
-      }
-    }),
     new webpack.ContextReplacementPlugin(
       /highlight\.js\/lib\/languages$/,
       new RegExp(`^./(ruby|javascript|css|scss|bash)`)
     ),
     new HtmlWebpackPlugin({
       title: package.name,
-      filename: path.resolve("assets", "index.html"),
+      filename:
+        process.env.NODE_ENV === "development" ? "index.html" : "../index.html",
       template: path.resolve("src", "index.ejs"),
-      inject: false,
-      hash: true
-    })
+      inject: false
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ],
   resolveLoader: {
     modules: ["node_modules", "node_modules/buddhablog-cli/lib/webpack/loaders"]
@@ -63,13 +55,14 @@ module.exports = {
             presets: ["@babel/preset-env", "@babel/react"],
             plugins: [
               "import-glob",
-              "@babel/plugin-proposal-object-rest-spread"
+              "@babel/plugin-proposal-object-rest-spread",
+              "react-hot-loader/babel"
             ]
           }
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: [
           { loader: "style-loader" }, // creates style nodes from JS strings
           { loader: "css-loader" }, // translates CSS into CommonJS

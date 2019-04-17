@@ -4,7 +4,7 @@
   "description": "A complete working buddhablog",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
+    "start": "webpack-dev-server --hotOnly --devtool eval-source-map --history-api-fallback --open",
     "build": "webpack -p",
     "post": "buddha post",
     "page": "buddha page"
@@ -25,6 +25,7 @@
     "html-webpack-plugin": "^3.2.0",
     "js-yaml": "^3.13.1",
     "node-sass": "^4.11.0",
+    "react-hot-loader": "^4.8.4",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.30.0",
