@@ -5,7 +5,7 @@ import NavigationBar from "./NavigationBar";
 import Blog from "./Blog";
 import Page from "./Page";
 
-const Main = ({ posts, pages }) => (
+const Layout = ({ posts, pages }) => (
   <Router>
     <div className="row">
       <div className="col-md-2 col-xs-12">
@@ -29,9 +29,9 @@ const Main = ({ posts, pages }) => (
   </Router>
 );
 
-Main.propTypes = {
+Layout.propTypes = {
   posts: PropTypes.array.isRequired,
   pages: PropTypes.array.isRequired
 };
 
-export default Main;
+export default Layout;

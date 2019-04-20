@@ -1,12 +1,6 @@
-import { hot } from "react-hot-loader/root";
-import React from "react";
-import { render } from "react-dom";
-import Main from "./components/Main";
-import store from "./store";
-import "./style/main.scss";
-const App = hot(Main);
+import React from 'react'
+import { render } from 'react-dom'
+import './style/main.scss'
+import App from './components/App'
 
-render(
-  <App pages={store.pages} posts={store.posts} />,
-  document.getElementById("buddhablog")
-);
+render(<App />, document.getElementById('buddhablog'))
