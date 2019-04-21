@@ -1,6 +1,12 @@
 import React from 'react'
-import { render } from 'react-dom'
+import { render, hydrate } from 'react-dom'
 import './style/main.scss'
 import App from './components/App'
 
-render(<App />, document.getElementById('buddhablog'))
+const rootElement = document.getElementById('buddhablog')
+
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement)
+} else {
+  render(<App />, rootElement)
+}

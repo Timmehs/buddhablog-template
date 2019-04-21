@@ -11,10 +11,10 @@ module.exports = {
   output: {
     filename: 'assets/[name].js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/assets'
+    publicPath: '/'
   },
   devServer: {
-    contentBase: path.resolve(__dirname),
+    contentBase: path.resolve(__dirname, 'build'),
     hot: true
   },
   plugins: [

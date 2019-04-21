@@ -1,6 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const NavigationBar = ({ pages }) => (
   <nav>
@@ -20,10 +20,10 @@ const NavigationBar = ({ pages }) => (
       ))}
     </ul>
   </nav>
-);
+)
 
 NavigationBar.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.object).isRequired
-};
+}
 
-export default NavigationBar;
+export default NavigationBar

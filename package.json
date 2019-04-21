@@ -9,12 +9,6 @@
     "post": "buddha post",
     "page": "buddha page"
   },
-  "reactSnap": {
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    }
-  },
   "author": "Tim Sandberg <tasandberg@gmail.com>",
   "license": "ISC",
   "devDependencies": {
