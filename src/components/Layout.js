@@ -12,16 +12,14 @@ const Layout = ({ posts, pages }) => (
         <NavigationBar pages={pages} />
       </div>
       <div className="col-md-8 col-xs-12 main-content">
-        <Route exact path="/" component={() => <Blog posts={posts} />} />
+        <Route exact path="/" render={() => <Blog posts={posts} />} />
 
         {/* Build Routes for all non-blog pages */}
         {pages.map(page => (
           <Route
             path={'/' + page.slug}
             key={page.slug}
-            component={() => (
-              <Page title={page.title} content={page.markdown} />
-            )}
+            render={() => <Page title={page.title} content={page.markdown} />}
           />
         ))}
       </div>

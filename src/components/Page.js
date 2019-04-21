@@ -1,17 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Markdown from 'markdown-to-jsx'
-import Helmet from 'react-helmet'
+import Seo from './Seo'
 
 /**
  * Use this component to add additional pages outside of your blog, like an "About Me" section
  */
 const Page = ({ title, content }) => (
   <div>
-    <Helmet>
-      <title>{title}</title>
-    </Helmet>
-    <h2>{title}</h2>
+    <Seo title={title} description={content.slice(0, 150).trim()} />
+    <h1>{title}</h1>
     <Markdown>{content}</Markdown>
   </div>
 )
