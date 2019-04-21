@@ -37,7 +37,7 @@ const Seo = ({ title, description, post }) => {
     { name: 'og:locale', content: 'en_EN' }
   ]
 
-  return <Helmet title={title} meta={meta} />
+  return <Helmet titleTemplate="%s | BuddhaBlog" title={title} meta={meta} />
 }
 
 Seo.propTypes = {
