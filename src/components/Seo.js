@@ -13,6 +13,10 @@ const Seo = ({ title, description }) => {
     { name: 'og:title', content: title },
     // { name: 'og:type', content: type },
     // { name: 'og:url', content: url },
+    {
+      name: 'og:image',
+      content: 'https://d1u0z01nzsqzn7.cloudfront.net/images/enso.png'
+    },
     { name: 'og:description', content: description },
     // { name: 'og:site_name', content: 'yagd-9d9f8.firebaseapp.com' },
     { name: 'og:locale', content: 'en_EN' }

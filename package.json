@@ -7,7 +7,8 @@
     "start": "NODE_ENV=development webpack-dev-server --hotOnly --devtool eval-source-map --history-api-fallback --open",
     "build": "webpack -p && react-snap",
     "post": "buddha post",
-    "page": "buddha page"
+    "page": "buddha page",
+    "test": "NODE_PATH=. ava ./test/"
   },
   "author": "Tim Sandberg <tasandberg@gmail.com>",
   "license": "ISC",
