@@ -1,3 +1,9 @@
+/**
+ * This component:
+ *   - Adds initial meta content for the site via Helmet
+ *   - Adds hot module reloading to the app
+ *   - Passes store data into the top-level Layout component
+ */
 import React from 'react'
 import { hot } from 'react-hot-loader/root'
 import Helmet from 'react-helmet'
@@ -5,7 +11,7 @@ import Layout from './Layout'
 import store from '../store'
 
 const { posts, pages } = store
-// Add Header content via Helmet, and add hot binding
+
 const App = () => (
   <div>
     <Helmet>

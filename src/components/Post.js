@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
-import PropTypes from "prop-types";
-import BlogTag from "./BlogTag";
-import Markdown from "markdown-to-jsx";
-import formatDate from "../util/dateFormatter";
-import CodeBlock from "./CodeBlock";
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+import BlogTag from './BlogTag'
+import Markdown from 'markdown-to-jsx'
+import formatDate from '../util/dateFormatter'
+import CodeBlock from './CodeBlock'
 
-const headerBackground = post => ({ backgroundImage: `url(${post.header})` });
+const headerBackground = post => ({ backgroundImage: `url(${post.header})` })
 
 const Post = ({ post }) => (
   <article className="post-body">
@@ -38,10 +38,10 @@ const Post = ({ post }) => (
       {post.markdown}
     </Markdown>
   </article>
-);
+)
 
 Post.propTypes = {
   post: PropTypes.object.isRequired
-};
+}
 
-export default Post;
+export default Post
