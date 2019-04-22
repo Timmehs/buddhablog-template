@@ -31,7 +31,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   resolveLoader: {
-    modules: ['node_modules', 'node_modules/buddhablog-cli/lib/webpack/loaders']
+    modules: ['node_modules', 'node_modules/buddhablog-cli/lib/webpack']
   },
   module: {
     rules: [
