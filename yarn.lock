@@ -105,6 +105,16 @@ brace-expansion@^1.1.7:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
 
+buddhablog-cli@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/buddhablog-cli/-/buddhablog-cli-1.1.0.tgz#04e41275981465111ffa1fdcdf6d1347de45576f"
+  integrity sha512-1EVsCTf6R+nTOK4dVA/oyPpMPZ5gOdlzQlTmRZr1XOaLF/m3zmyGvZMD46OsQk60SL8FM+CySR3pq181fIxpLQ==
+  dependencies:
+    colors "^1.3.3"
+    commander "^2.20.0"
+    mkdirp "^0.5.1"
+    user-settings "https://github.com/Timmehs/user-settings#respect-absolute-filepaths"
+
 callsites@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz#b3630abd8943432f54b3f0519238e33cd7df2f73"
@@ -147,6 +157,16 @@ color-name@1.1.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
+
+colors@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/colors/-/colors-1.3.3.tgz#39e005d546afe01e01f9c4ca8fa50f686a01205d"
+  integrity sha512-mmGt/1pZqYRjMxB1axhTo16/snVZ5krrKkcmMeVKxzECMMXoCgnvTPp10QgHfcbQZw8Dq2jMNG6je4JlWU0gWg==
+
+commander@^2.20.0:
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz#d58bb2b5c1ee8f87b0d340027e9e94e222c5a422"
+  integrity sha512-7j2y+40w61zy6YC2iRNpUe/NwhNyoXrYpHMrSunaMG64nRnaf96zO/KMQR4OyN/UnE5KLyEBnKHd4aG3rskjpQ==
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -1415,6 +1435,10 @@ uri-js@^4.2.2:
   integrity sha512-KY9Frmirql91X2Qgjry0Wd4Y+YTdrdZheS8TFwvkbLWf/G5KNJDCh6pKL5OZctEW4+0Baa5idK2ZQuELRwPznQ==
   dependencies:
     punycode "^2.1.0"
+
+"user-settings@https://github.com/Timmehs/user-settings#respect-absolute-filepaths":
+  version "0.2.0"
+  resolved "https://github.com/Timmehs/user-settings#68c76cc7bb4702b444392eec40d7b37047c08731"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
