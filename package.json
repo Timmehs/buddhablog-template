@@ -4,8 +4,7 @@
   "description": "A complete working buddhablog",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --hotOnly --devtool eval-source-map --history-api-fallback --open",
-    "build": "webpack -p && react-snap",
+    "start": "buddha start",
     "post": "buddha post",
     "page": "buddha page",
     "test": "NODE_PATH=. ava ./test/"
@@ -13,6 +12,7 @@
   "author": "Tim Sandberg <tasandberg@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "buddhablog-cli": "^1.1.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.2",
