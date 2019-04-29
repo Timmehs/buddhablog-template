@@ -5,10 +5,10 @@
  *   - Passes store data into the top-level Layout component
  */
 import React from 'react'
-import { hot } from 'react-hot-loader/root'
 import Layout from './Layout'
 import store from '../store'
 import Seo from './Seo'
+import { hot } from 'react-hot-loader/root'
 
 const { posts, pages } = store
 
