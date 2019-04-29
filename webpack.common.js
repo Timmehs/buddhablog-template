@@ -1,5 +1,4 @@
 const path = require('path')
-const fs = require('fs')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -7,7 +6,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const htmlTemplateFilename = 'html-template.ejs'
 
 module.exports = {
-  mode: 'development',
   entry: {
     main: path.resolve(__dirname, 'src', 'index.js'),
     blog: path.resolve(__dirname, 'src', 'store.js')
@@ -23,12 +21,6 @@ module.exports = {
       chunks: 'all'
     }
   },
-  resolve: {
-    alias: {
-      'react-dom': '@hot-loader/react-dom'
-    }
-  },
-  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(),
     new webpack.ContextReplacementPlugin(
@@ -39,13 +31,8 @@ module.exports = {
       title: require('./package.json').name,
       template: path.resolve('src', htmlTemplateFilename),
       inject: false
-    }),
-    new webpack.HotModuleReplacementPlugin()
+    })
   ],
-  devServer: {
-    hot: true,
-    contentBase: path.resolve(__dirname, 'build')
-  },
   resolveLoader: {
     modules: ['node_modules', './node_modules/buddhablog-cli/lib/webpack']
   },
